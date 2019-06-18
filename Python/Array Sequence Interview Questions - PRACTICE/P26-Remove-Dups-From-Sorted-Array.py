@@ -1,4 +1,4 @@
-# LEETCODE PROBLEM 727 - Remove Duplicates from a sorted array
+# LEETCODE PROBLEM 26 - Remove Duplicates from a sorted array
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 # -----------------------------------------------------------------------------
 # Given a sorted array nums, remove the duplicates in-place such that each
