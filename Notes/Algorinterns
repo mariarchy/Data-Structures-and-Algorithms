@@ -1,0 +1,67 @@
+QUESTION 1
+*******************************************************************************
+USD, CAD, 1.3
+EUR, USD, 2.5
+
+CAD -> USD
+CAD -> EUR
+
+Create a dictionary of all exchange rates between all currencies
+BFS to reduce steps you make for each query
+ - Improvement: could save the exchange rates between each node and add vertices
+   to the graph -> store every intermediate step
+ - Algorithm can reach O(k + n^2) time complexity
+Runtime = O(v + n) -> number of vertices + input
+Space = O(n^2)
+
+Alternative:
+Instead of storing every possible pair, start at a rep node and run 1 BFS -> O(n + m)
+This would make 1 intermediate step at most for each currency exchange
+For each pair where you have to make an intermediate step, run BFS
+
+Runtime = O(k + m + n) =
+  Preproccessing = O(n + m)
+  Setti
+
+if Currency1 is in row:
+  if Currency2 is in column:
+    return rate
+  else:
+  ********************************
+    multiplier = multiplier * rate
+Space = O(n^2)
+
+QUESTION 2
+*******************************************************************************
+Given a builder string and a target string, find the least number of builder
+strings needed to construct a target string. You are allowed to make as many
+deletions as you'd like. You may assume that the target is always longer than
+the builder and that the target can always be constructed.
+
+M >> N
+
+Builder: 'abc'
+Target: 'abcac'
+  - 'abc'
+  - 'abc' + 'abc' - 'b'
+
+Builder: 'acb'
+Target: 'abcac'
+  - 'acb' - 'c'
+  - 'ab' + 'acb' - 'a' - 'b'
+  - 'abc' + 'acb' - 'b'
+
+Solution 1: Prefix counter
+hash map of each combination of prefixes
+iterate through each char until you identify a combination in the dictionary
+if the next char doesnt create a prefix in the dictionary, increment count and
+increment char/index pointer
+Runtime = O(n^2 + m^2)
+Space = O(n)
+
+Solution 2:
+Precomputation - make graph where node is a letter in the builder and vertex is
+a boolean that sets if you need to wrap back to the beginning of the builder
+(aka need a new builder str)
+
+Find a copy of each 
