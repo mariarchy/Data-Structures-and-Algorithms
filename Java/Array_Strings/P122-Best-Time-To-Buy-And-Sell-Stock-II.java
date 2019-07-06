@@ -26,8 +26,8 @@ class Solution2 {
         int rel_min = prices[0];
         int rel_max = rel_min;
         for (int i = 1; i < prices.length; i++) {
-            if (prices[i] > prices[i-1]) rel_max = prices[i];
-            else if (prices[i] < prices[i-1]) {
+            if (prices[i] >= prices[i-1]) rel_max = prices[i];
+            else {
               if (rel_max != rel_min) {
                 profit += rel_max - rel_min;
               }
