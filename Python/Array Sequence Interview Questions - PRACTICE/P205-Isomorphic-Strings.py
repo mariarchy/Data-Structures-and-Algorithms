@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/isomorphic-strings
 from collections import defaultdict
 
 class Solution:
